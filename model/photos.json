@@ -1,0 +1,26 @@
+{
+	"images": [
+		{
+            "id":1,
+			"heading": "River Rocks",
+			"content": "this is a picture of a river with rocks.",
+			"path": "./images/photo01.jpg",
+			"meta": "River"
+		},
+		{
+            "id": 2,
+			"heading": "Pond",
+			"content": "this is the picture of a pond.",
+			"path": "./images/photo02.jpg",
+			"meta": "Pond"
+		},
+		{
+            "id": 3,
+			"heading": "Snow running",
+			"content": "this is a picture of running in snow.",
+			"path": "./images/photo03.jpg",
+			"meta": "Snow"
+		}
+
+	]
+}

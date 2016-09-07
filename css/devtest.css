@@ -1,0 +1,61 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    align-items: center;
+    padding-left: 10%;
+    padding-right: 10%;
+    margin-right: 10%;
+    margin-left: 10%;
+    border: solid;
+
+}
+
+h1 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: normal;
+    font-size: 36px;
+}
+
+h2{
+
+}
+
+h3{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+h4{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: normal;
+    font-size: 12px;
+}
+
+h5 {
+
+}
+
+section{
+    width:100%;
+}
+
+.captionPreviews{
+    display: flex;
+    width: 800px;
+}
+
+.caption{
+    width: 500px;
+}
+
+.previews{
+    flex-grow: 1;
+}
+
+.selected {
+    width: 800px;
+}
+
+.preview{
+    width: 150px;
+}

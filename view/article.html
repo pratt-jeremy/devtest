@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            $.getJSON('http://localhost:63342/devtest/model/photos.json', function(data){
+                $.each(data.images, function(i, image){
+                    if(image.id == 1) {
+                        $(".selectedImage").append('<img class="selected" id='+ image.id +' src= "http://localhost:63342/devtest/' + image.path + '">');
+                        $(".imgTitle").append(image.heading);
+                        $(".imgCaption").append(image.content);
+                    } else{
+                        $('.previews').append('<img onclick="javascript:updateImages('+ image.id +')" class="preview" src= "http://localhost:63342/devtest/' + image.path + '">');
+                    }
+
+                })
+            });
+        });
+
+        function updateImages(id){
+            $(".selectedImage").empty();
+            $(".imgTitle").empty();
+            $(".imgCaption").empty();
+            $('.previews').empty();
+            $.getJSON('http://localhost:63342/devtest/model/photos.json', function(data){
+                $.each(data.images, function(i, image){
+                    if(image.id == id) {
+                        $(".selectedImage").append('<img class="selected" id='+ image.id +' src= "http://localhost:63342/devtest/' + image.path + '">');
+                        $(".imgTitle").append(image.heading);
+                        $(".imgCaption").append(image.content);
+                    } else{
+                        $('.previews').append('<img onclick="javascript:updateImages('+ image.id +')" class="preview"src= "http://localhost:63342/devtest/' + image.path + '">');
+                    }
+
+                })
+            });
+        }
+    </script>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="http://localhost:63342/devtest/css/devtest.css" />
+    <title>Article</title>
+
+</head>
+<body>
+    <section>
+        <h4>Subtitle</h4>
+        <h1>Title of the section</h1>
+        <div class="selectedImage">
+        </div>
+        <div class="captionPreviews">
+            <div class="caption">
+                <h3 class="imgTitle">
+
+                </h3>
+                <h4 class="imgCaption">
+
+                </h4>
+            </div>
+            <div class="previews">
+            </div>
+        </div>
+        <div class="article">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ullamcorper faucibus lorem ut eleifend. Etiam lobortis, ipsum sed vulputate interdum, odio elit imperdiet ex, id elementum dui metus id enim. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis blandit ac est in interdum. Praesent vel auctor lectus. Nunc ligula magna, ultrices ac viverra vel, aliquet et quam. Phasellus enim sapien, fringilla quis diam ut, bibendum auctor risus. Ut id lectus eget lacus pharetra sodales. Cras tempus tortor dui. Aenean vel enim suscipit, suscipit magna vitae, lacinia risus. Cras facilisis mollis arcu, at tempor eros sollicitudin at. Integer eget justo tristique, vulputate eros et, faucibus neque. Ut id ante auctor, tristique ante interdum, pulvinar eros. Etiam dignissim lectus diam, quis consectetur purus sagittis eget.</p>
+            <p>Donec aliquam pellentesque finibus. Aenean maximus sagittis lorem quis pharetra. Praesent non dictum ligula. Quisque eget ornare dolor. Etiam pharetra mollis massa, nec finibus elit malesuada finibus. Integer sollicitudin mi ut viverra scelerisque. Vestibulum ornare tincidunt nunc et auctor. Quisque ex ante, bibendum eu mattis quis, lacinia eu diam. Suspendisse eu quam aliquam, dignissim tellus non, pellentesque libero. In velit augue, imperdiet nec imperdiet in, egestas eget enim. Nullam dignissim libero ut nibh rutrum interdum. Donec nec lorem nec nunc tincidunt dapibus. Suspendisse tristique eu orci in fermentum.</p>
+            <p>Vestibulum malesuada turpis nec fringilla tristique. Fusce tortor lectus, euismod quis pulvinar vel, aliquet ac sem. Fusce odio urna, sollicitudin facilisis purus at, maximus maximus elit. In et magna purus. Nulla efficitur ipsum sed lectus iaculis, et imperdiet neque laoreet. Etiam eu enim velit. Duis vel accumsan diam, quis iaculis velit. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam malesuada lectus eget neque efficitur, sit amet convallis libero gravida. Duis dui sem, tristique et elit et, sodales tincidunt justo. Sed at volutpat dolor.</p>
+            <p>Integer et odio et felis facilisis feugiat et a odio. Duis sagittis erat id efficitur bibendum. Phasellus vel imperdiet augue. Donec at elit eget leo dictum congue ac molestie velit. Cras sit amet hendrerit dolor. Maecenas condimentum luctus sapien sit amet bibendum. Etiam et ultricies quam. Cras ornare condimentum commodo. Nunc aliquam elit a velit dictum, vel egestas sem laoreet. Vivamus eleifend iaculis lacus ut lacinia. Sed id eleifend justo. Nulla purus est, sollicitudin id quam egestas, porttitor efficitur orci. Donec semper egestas diam, at feugiat felis imperdiet sit amet. Suspendisse massa orci, pretium a porta at, ultrices non justo. Cras eget dolor id neque malesuada cursus.</p>
+            <p>Vestibulum nec consequat eros. Nullam elementum ornare magna, non faucibus ex malesuada sit amet. Donec dapibus pulvinar fermentum. Ut molestie, elit vel vehicula vehicula, ante odio vulputate velit, vel tincidunt lorem elit sit amet est. Quisque id sapien non dui ullamcorper sagittis eget sed urna. Quisque fermentum tristique mi, a commodo mi semper eget. Interdum et malesuada fames ac ante ipsum primis in faucibus. Duis lobortis orci elit, ac sodales odio lobortis sit amet. Mauris vitae est odio. Integer pretium rutrum libero, et molestie eros. Aenean turpis ipsum, tempus at ornare sit amet, ultricies quis mauris. Etiam semper aliquet leo ut hendrerit. Vivamus eget purus nisi.</p>
+
+        </div>
+    </section>
+</body>
+</html>
