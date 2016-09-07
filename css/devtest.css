@@ -16,7 +16,9 @@ h1 {
 }
 
 h2{
-
+    font-family: 'Open Sans', sans-serif;
+    font-weight: normal;
+    font-size: 28px;
 }
 
 h3{
@@ -28,7 +30,7 @@ h3{
 h4{
     font-family: 'Open Sans', sans-serif;
     font-weight: normal;
-    font-size: 12px;
+    font-size: 14px;
 }
 
 h5 {
@@ -54,8 +56,23 @@ section{
 
 .selected {
     width: 800px;
+    height: 500px;
 }
 
 .preview{
     width: 150px;
+    height: 100px;
+}
+
+.article{
+    display: flex;
+    width:1000px;
+}
+
+.words{
+    width: 650px;
+}
+
+.video{
+    flex-grow: 1;
 }
