@@ -1,10 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+    <script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            $.getJSON('http://localhost:63342/devtest/model/masonry-data.json', function(data){
+                
+                $.each(data.tiles, function(i, tile){
+                        $(".tiles").append('<div class="tile" id="' + i + '"></div>')
+                        $("#" + i).append('<img class="tileImage" src= "http://localhost:63342/devtest/' + tile.image + '">');
+                        $("#" + i).append('<h3>' + tile.heading + '</h3>');
+                        $("#" + i).append('<h4>' + tile.content + '</h4>');
+                        $("#" + i).append('<h5>' + tile.meta + '</h5>');
+                    if(i == 4){
+                        return false;
+                    }
+                    });
+                
+                $(".tiles").append('<div class="load"><button onclick="javascript:loadMore()">Load More</button></div>');
 
+                })
+            });
+
+        function loadMore(){
+            $(".tiles").empty();
+            $.getJSON('http://localhost:63342/devtest/model/masonry-data.json', function(data){
+
+                $.each(data.tiles, function(i, tile){
+                    $(".tiles").append('<div class="tile" id="' + i +'"></div>')
+                    $("#" + i).append('<img class="tileImage" src= "http://localhost:63342/devtest/' + tile.image + '">');
+                    $("#" + i).append('<h3>' + tile.heading + '</h3>');
+                    $("#" + i).append('<h4>' + tile.content + '</h4>');
+                });
+
+            });
+        }
+    </script>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="http://localhost:63342/devtest/css/devtest.css" />
+    <title>Masonry</title>
+
+</head>
+<body >
+<div class="tiles">
+    
+</div>
 </body>
 </html>

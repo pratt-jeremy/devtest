@@ -5,7 +5,7 @@ body {
     padding-right: 10%;
     margin-right: 10%;
     margin-left: 10%;
-    border: solid;
+
 
 }
 
@@ -24,30 +24,40 @@ h2{
 h3{
     font-family: 'Open Sans', sans-serif;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 16px;
 }
 
 h4{
     font-family: 'Open Sans', sans-serif;
     font-weight: normal;
-    font-size: 14px;
+    font-size: 16px;
+    color: rgb(208, 211, 212);
 }
 
 h5 {
-
+    font-family: 'Open Sans', sans-serif;
+    font-weight: normal;
+    font-size: 16px;
 }
 
 section{
+    padding: 10px;
     width:100%;
+    border: solid;
+}
+
+.gallery{
+    width: 80%;
+    margin: 10px;
 }
 
 .captionPreviews{
     display: flex;
-    width: 800px;
+    width: 100%;
 }
 
 .caption{
-    width: 500px;
+    width: 50%;
 }
 
 .previews{
@@ -55,24 +65,60 @@ section{
 }
 
 .selected {
-    width: 800px;
-    height: 500px;
+    width: 100%;
 }
 
 .preview{
-    width: 150px;
-    height: 100px;
+    cursor: pointer;
+    width: 100px;
+    height: 80px;
 }
 
 .article{
-    display: flex;
-    width:1000px;
-}
-
-.words{
-    width: 650px;
+    width:100%;
 }
 
 .video{
-    flex-grow: 1;
+    float: right;
+    width: 40%;
+    margin: 10px;
+    border-bottom: solid;
+}
+
+.tiles{
+    background-color: rgb(208, 211, 212);
+    padding: 20px;
+    overflow: auto;
+}
+
+.tile{
+    float: left;
+    background-color: white;
+    width: 40%;
+    margin: 20px;
+    padding: 10px;
+}
+
+.tileImage{
+    width:100%;
+}
+
+.load{
+    width: 100%;
+    text-align: center;
+    clear: both;
+}
+
+button{
+    color: black;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    padding-top: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 10px;
+    background-color: transparent;
+    border: solid darkgray;
+    cursor: pointer;
+
 }
