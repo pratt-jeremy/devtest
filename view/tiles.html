@@ -1,10 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            $.getJSON('http://localhost:63342/devtest/model/masonry-data.json', function(data){
+
+                $.each(data.tiles, function(i, tile){
+                    if(i<3) {
+                        $(".areas").append('<div class="area" id="' + i + '"></div>')
+                        $("#" + i).append('<img class="tileImage" src= "http://localhost:63342/devtest/' + tile.image + '">');
+                        $("#" + i).append('<h3>' + tile.heading + '</h3>');
+                        $("#" + i).append('<h4>' + tile.content + '</h4>');
+                        $("#" + i).append('<h5>' + tile.meta + '</h5>');
+                    }
+                    if(3 <= i && i < 6) {
+                        $(".news").append('<div class="new" id="' + i + '"></div>')
+                        $("#" + i).append('<img class="tileImage" src= "http://localhost:63342/devtest/' + tile.image + '">');
+                        $("#" + i).append('<h3>' + tile.heading + '</h3>');
+                        $("#" + i).append('<h4>' + tile.content + '</h4>');
+                        $("#" + i).append('<h5>' + tile.meta + '</h5>');
+                    }
+                    if(6 <= i && i < 10) {
+                        $(".inspires").append('<div class="inspire" id="' + i + '"></div>')
+                        $("#" + i).append('<img class="tileImage" src= "http://localhost:63342/devtest/' + tile.image + '">');
+                        $("#" + i).append('<h3>' + tile.heading + '</h3>');
+                        $("#" + i).append('<h4>' + tile.content + '</h4>');
+                        $("#" + i).append('<h5>' + tile.meta + '</h5>');
+                    }
+                });
+            })
+        });
+    </script>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="http://localhost:63342/devtest/css/devtest.css" />
+    <title>Tiles</title>
+
 </head>
 <body>
-
+<section class="areas">
+    <h3>In Your Area</h3>
+    <hr color="#cc3366" >
+</section>
+<section class="news">
+    <h3>News</h3>
+    <hr color="#006699">
+</section>
+<section class="inspires">
+    <h3>Inspirational</h3>
+    <hr color="#669933">
+</section>
 </body>
 </html>

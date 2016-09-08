@@ -40,10 +40,16 @@ h5 {
     font-size: 16px;
 }
 
-section{
+article{
     padding: 10px;
     width:100%;
-    border: solid;
+}
+
+section{
+    width:100%;
+    padding: 10px;
+    overflow: auto;
+
 }
 
 .gallery{
@@ -69,6 +75,7 @@ section{
 }
 
 .preview{
+    margin:10px;
     cursor: pointer;
     width: 100px;
     height: 80px;
@@ -86,12 +93,11 @@ section{
 }
 
 .tiles{
-    background-color: rgb(208, 211, 212);
+
     padding: 20px;
-    overflow: auto;
 }
 
-.tile{
+.tiles .tile{
     float: left;
     background-color: white;
     width: 40%;
@@ -121,4 +127,22 @@ button{
     border: solid darkgray;
     cursor: pointer;
 
+}
+
+.area{
+    width:25%;
+    float: left;
+    margin:20px;
+}
+
+.new{
+    width:25%;
+    float: left;
+    margin:20px;
+}
+
+.inspire{
+    width:25%;
+    float: left;
+    margin:20px;
 }
