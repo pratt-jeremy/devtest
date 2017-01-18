@@ -93,16 +93,17 @@ section{
 }
 
 .tiles{
-
-    padding: 20px;
+    margin: 0 auto;
+    width: 1000px;
+    column-count: 2;
 }
 
 .tiles .tile{
-    float: left;
+    display: inline-block;
     background-color: white;
-    width: 40%;
-    margin: 20px;
+    width: 80%;
     padding: 10px;
+    margin-top: 20px;
 }
 
 .tileImage{
@@ -116,6 +117,7 @@ section{
 }
 
 button{
+    margin: 20px;
     color: black;
     font-family: 'Open Sans', sans-serif;
     font-size: 20px;
@@ -145,4 +147,382 @@ button{
     width:25%;
     float: left;
     margin:20px;
+}
+
+@media only screen and (max-width: 1100px) {
+    body {
+        font-family: 'Open Sans', sans-serif;
+        align-items: center;
+        padding-left: 5%;
+        padding-right: 5%;
+        margin-right: 5%;
+        margin-left: 5%;
+
+
+    }
+
+    h1 {
+        font-family: 'Open Sans', sans-serif;
+        font-weight: normal;
+        font-size: 30px;
+    }
+
+    h2{
+        font-family: 'Open Sans', sans-serif;
+        font-weight: normal;
+        font-size: 22px;
+    }
+
+    h3{
+        font-family: 'Open Sans', sans-serif;
+        font-weight: bold;
+        font-size: 13px;
+    }
+
+    h4{
+        font-family: 'Open Sans', sans-serif;
+        font-weight: normal;
+        font-size: 13px;
+        color: rgb(208, 211, 212);
+    }
+
+    h5 {
+        font-family: 'Open Sans', sans-serif;
+        font-weight: normal;
+        font-size: 8px;
+    }
+
+    p {
+        font-size: 13px;
+    }
+    .preview{
+        margin:5px;
+        cursor: pointer;
+        width: 80px;
+        height: 60px;
+    }
+
+    .tiles{
+        margin: 0 auto;
+        width: 650px;
+        column-count: 2;
+    }
+
+    .tiles .tile{
+        display: inline-block;
+        background-color: white;
+        width: 80%;
+        margin-top: 10px;
+        padding: 8px;
+    }
+
+    .area{
+        width:25%;
+        float: left;
+        margin:15px;
+    }
+
+    .new{
+        width:25%;
+        float: left;
+        margin:15px;
+    }
+
+    .inspire{
+        width:25%;
+        float: left;
+        margin:15px;
+    }
+
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+        font-family: 'Open Sans', sans-serif;
+        align-items: center;
+        padding-left: 5%;
+        padding-right: 5%;
+        margin-right: 5%;
+        margin-left: 5%;
+
+
+    }
+
+    h1 {
+        font-family: 'Open Sans', sans-serif;
+        font-weight: normal;
+        font-size: 28px;
+    }
+
+    h2{
+        font-family: 'Open Sans', sans-serif;
+        font-weight: normal;
+        font-size: 17px;
+    }
+
+    h3{
+        font-family: 'Open Sans', sans-serif;
+        font-weight: bold;
+        font-size: 7px;
+    }
+
+    h4{
+        font-family: 'Open Sans', sans-serif;
+        font-weight: normal;
+        font-size: 7px;
+        color: rgb(208, 211, 212);
+    }
+
+    h5 {
+        font-family: 'Open Sans', sans-serif;
+        font-weight: normal;
+        font-size: 5px;
+    }
+
+    p {
+        font-size: 10px;
+    }
+
+    .preview{
+        margin:5px;
+        cursor: pointer;
+        width: 40px;
+        height: 30px;
+    }
+
+    .tiles{
+        margin: 0 auto;
+        width: 280px;
+        column-count: 2;
+    }
+
+    .tiles .tile{
+        display: inline-block;
+        background-color: white;
+        width: 80%;
+        margin-top: 5px;
+        padding: 2px;
+    }
+
+    .area{
+        width:25%;
+        float: left;
+        margin:10px;
+    }
+
+    .new{
+        width:25%;
+        float: left;
+        margin:10px;
+    }
+
+    .inspire{
+        width:25%;
+        float: left;
+        margin:10px;
+    }
+}
+
+@media only screen and (max-width: 350px) {
+    body {
+        font-family: 'Open Sans', sans-serif;
+        align-items: center;
+        padding-left: 5%;
+        padding-right: 5%;
+        margin-right: 5%;
+        margin-left: 5%;
+
+
+    }
+
+    h1 {
+        font-family: 'Open Sans', sans-serif;
+        font-weight: normal;
+        font-size: 20px;
+    }
+
+    h2{
+        font-family: 'Open Sans', sans-serif;
+        font-weight: normal;
+        font-size: 15px;
+    }
+
+    h3{
+        font-family: 'Open Sans', sans-serif;
+        font-weight: bold;
+        font-size: 5px;
+    }
+
+    h4{
+        font-family: 'Open Sans', sans-serif;
+        font-weight: normal;
+        font-size: 5px;
+        color: rgb(208, 211, 212);
+    }
+
+    h5 {
+        font-family: 'Open Sans', sans-serif;
+        font-weight: normal;
+        font-size: 3px;
+    }
+
+    p {
+        font-size: 8px;
+    }
+
+    button{
+        color: black;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 10px;
+        padding-top: 5px;
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-bottom: 5px;
+        background-color: transparent;
+        border: solid darkgray;
+        cursor: pointer;
+
+    }
+
+    .preview{
+        margin:5px;
+        cursor: pointer;
+        width: 20px;
+        height: 15px;
+    }
+
+    .tiles{
+        margin: 0 auto;
+        width: 200px;
+        column-count: 2;
+    }
+
+    .tiles .tile{
+        display: inline-block;
+        background-color: white;
+        width: 80%;
+        margin-top: 3px;
+        padding: 1px;
+    }
+
+    .area{
+        width:25%;
+        float: left;
+        margin:5px;
+    }
+
+    .new{
+        width:25%;
+        float: left;
+        margin:5px;
+    }
+
+    .inspire{
+        width:25%;
+        float: left;
+        margin:5px;
+    }
+
+
+}
+
+@media only screen and (max-width: 200px) {
+    body {
+        font-family: 'Open Sans', sans-serif;
+        align-items: center;
+        padding-left: 5%;
+        padding-right: 5%;
+        margin-right: 5%;
+        margin-left: 5%;
+
+
+    }
+
+    h1 {
+        font-family: 'Open Sans', sans-serif;
+        font-weight: normal;
+        font-size: 13px;
+    }
+
+    h2{
+        font-family: 'Open Sans', sans-serif;
+        font-weight: normal;
+        font-size: 10px;
+    }
+
+    h3{
+        font-family: 'Open Sans', sans-serif;
+        font-weight: bold;
+        font-size: 3px;
+    }
+
+    h4{
+        font-family: 'Open Sans', sans-serif;
+        font-weight: normal;
+        font-size: 3px;
+        color: rgb(208, 211, 212);
+    }
+
+    h5 {
+        font-family: 'Open Sans', sans-serif;
+        font-weight: normal;
+        font-size: 2px;
+    }
+
+    p {
+        font-size: 4px;
+    }
+
+    button{
+        color: black;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 8px;
+        padding-top: 5px;
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-bottom: 5px;
+        background-color: transparent;
+        border: solid darkgray;
+        cursor: pointer;
+
+    }
+
+    .preview{
+        margin:5px;
+        cursor: pointer;
+        width: 10px;
+        height: 8px;
+    }
+
+    .tiles{
+        margin: 0 auto;
+        width: 100px;
+        column-count: 2;
+    }
+
+    .tiles .tile{
+        display: inline-block;
+        background-color: white;
+        width: 80%;
+        margin-top: .9px;
+        padding: .9px;
+    }
+
+    .area{
+        width:25%;
+        float: left;
+        margin:1px;
+    }
+
+    .new{
+        width:25%;
+        float: left;
+        margin:1px;
+    }
+
+    .inspire{
+        width:25%;
+        float: left;
+        margin:1px;
+    }
 }

@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
     <script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
-    <script src="https://unpkg.com/masonry-layout@4.1/dist/masonry.pkgd.js"></script>
     <script type="text/javascript">
         $(function(){
             $.getJSON('http://localhost:63342/devtest/model/masonry-data.json', function(data){
@@ -17,14 +16,11 @@
                         return false;
                     }
                     });
-                $(".tiles").append('<div class="load"><button onclick="javascript:loadMore()">Load More</button></div>');
 
                 })
             });
-        $(".tiles").masonry({
-            'itemSelector' : '.tile'
-        });
         function loadMore(){
+            $(".load").empty();
             $(".tiles").empty();
             $.getJSON('http://localhost:63342/devtest/model/masonry-data.json', function(data){
 
@@ -36,9 +32,6 @@
                 });
                
             });
-            $(".tiles").masonry({
-                'itemSelector' : '.tile'
-            });
         }
     </script>
     <meta charset="UTF-8">
@@ -47,8 +40,10 @@
 
 </head>
 <body style="background-color: rgb(208, 211, 212);">
+
 <div class="tiles">
     
 </div>
+<div class="load"><button onclick="javascript:loadMore()">Load More</button></div>
 </body>
 </html>
